@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        :root{
+            --bg-color: #f5e1f7;      /* Light lavender background */
+            --second-bg-color: #dac0e1; /* Lighter lavender */
+            --text-color: #333333;     /* Dark gray text color */
+            --main-color: #ff7af5;
+        }
+        body{
+            background: var(--second-bg-color);
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: monospace;
+        }
+        .slider{
+            position: relative;
+            width: 100%;
+            height: 470px;
+            overflow:hidden;
+        }
+        .item{
+            position: absolute;
+            width: 300px;
+            height: 420px;
+            text-align: justify;
+            background: var(--bg-color);
+            border-radius: 10px;
+            padding: 20px;
+            transition: 0.5s;
+            left: calc(50% - 110px);
+            top: 0;
+        }
+        .btn{
+            margin: 3px;
+            border: 1px solid var(--main-color);
+            height: 2rem;
+            width: 8rem;
+            border-radius: 0.5rem;
+            font-family: monospace;
+            font-weight: 400;
+            cursor: pointer;
+            background: var(--bg-color);
+        }
+        a{
+            position: fixed;
+            top:10px;
+            right:10px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: large;
+        }
+        #next,#prev{
+            position: absolute;
+            top: 40%;
+            color: var(--text-color);
+            background-color: transparent;
+            border: none;
+            font-size: xxx-large;
+            font-family: monospace;
+            font-weight: bold;
+            left: 50px;      
+        }
+        #next{
+            left:unset;
+            right:50px;
+        }
+    </style>
+</head>
+<body>
+ <div class="slider">
+    <div class="item">
+        <h1>Secure Web Server Deployment with AWS</h1>
+        <p>In this project, we will deploy secured web servers on Linux using Amazon EC2 instances in the US-East-2 (Ohio) and US-West-2 (Oregon) regions. We will configure the instances with custom AMIs to meet the specific requirements of XYZ Corporation's application. Additionally, we will create and manage EBS volumes, perform volume detachment, deletion, extension, and backup to ensure data integrity and availability.
+    </p>
+        <button class="btn">Read More...</button>
+    </div>
+    <div class="item">
+        <h1>AWS Infrastructure Administration and Security</h1>
+        <p>
+            This project involves setting up user accounts and groups in AWS to manage administrative tasks, such as launching and stopping EC2 instances, creating VPCs, subnets, NACLs, security groups, and RDS instances. Additionally, security options will be explored to protect AWS resources, and IAM Access Analyzer will be utilized to identify potential risks associated with roles.
+        </p>
+            <button class="btn">Read More...</button>
+    </div>
+    <div class="item">
+        <h1>AWS Infrastructure Scaling and Load Balancing</h1>
+        <p>
+            This project involves migrating the infrastructure of XYZ Corporation from on-premise solutions to AWS to handle increasing application load efficiently. The tasks include deploying compute resources dynamically based on CPU utilization thresholds, setting up an Application Load Balancer to distribute traffic between blue and green deployment target groups using weighted routing, and routing traffic to the company's domain.
+        </p>
+            <button class="btn">Read More...</button>
+    </div>
+    <div class="item">
+        <h1>VPC Architecture Setup for XYZ Corporation</h1>
+        <p>
+            In this project, I will design and set up distinct Amazon VPCs for the production and development teams of XYZ Corporation. For the production network, a 4-tier architecture will be implemented with private and public subnets, allowing specific instances to send internet requests. For the development network, a 2-tier architecture will be created, with peering connections established between the production and development networks to facilitate communication.
+        </p>
+            <button class="btn">Read More...</button>
+    </div>
+    <div class="item">
+        <h1>Secure VPC Connectivity with S3 Endpoint</h1>
+        <p>
+            This project ensures a safe and secure environment for deploying resources within an organization's AWS infrastructure. By implementing VPC endpoints for Amazon S3 using both gateway and interface endpoints, it provides secure access to S3 buckets, catering to various connectivity needs effectively.
+        </p>
+            <button class="btn">Read More...</button>
+    </div>
+    <div class="item">
+        <h1>Secure EC2 Connectivity with Security Groups</h1>
+        <p>
+            This project focuses on establishing a secure environment within an organization's AWS infrastructure. By creating two EC2 instances, Master and Client, and configuring security groups, it ensures that access to the Client instance is restricted to SSH connections only through the Master instance, enhancing security measures effectively.
+        </p>
+            <button class="btn">Read More...</button>
+    </div>
+    <div class="item">
+        <h1>DynamoDB Setup and Data Migration</h1>
+        <p>
+            In this project, the focus is on implementing a suitable database service for XYZ Corporation's application. By creating a DynamoDB table with a partition key as ID, adding sample data to the table, and then performing backup and deletion operations, the project ensures a seamless migration process with data integrity and reliability.
+        </p>
+            <button class="btn">Read More...</button>
+    </div>
+    <div class="item">
+        <h1>Redshift Data Warehouse Setup and Querying</h1>
+        <p>
+            This project entails setting up a Redshift data warehouse for XYZ Corporation's application database needs. By creating a Redshift cluster, loading data into it, and querying the data using the query editor, the project ensures efficient data storage and retrieval capabilities for the organization's application.
+        </p>
+            <button class="btn">Read More...</button>
+    </div>
+    <div class="item">
+        <h1> Automated Web Application Testing Environment Setup with CloudFormation</h1>
+        <p>
+            This project automates the setup of a web-based application testing environment for XYZ Corporation using CloudFormation. By launching EC2 instances for the web, application, and database tiers, along with configuring security groups, subnets, and Route 53 for traffic routing, the development team can seamlessly test their code without relying on system administrators. Additionally, a solution is proposed to ensure that the RDS DB instance persists even when the development stack is deleted, allowing for efficient testing and resource management.
+        </p>
+            <button class="btn">Read More...</button>
+    </div>
+    <div class="item">
+        <h1>Serverless Web Application Autoscaling with AWS Lambda and SQS</h1>
+        <p>
+            This project implements a serverless solution for XYZ Corporation's new web-based application, leveraging AWS Lambda and SQS to achieve efficient resource management. A sample Python Lambda function is created, and its trigger is set to SQS to handle message-based invocations. This setup enables automatic scaling of resources based on demand, ensuring cost-effectiveness and optimal performance for the application while reducing the need for continuous server operation.
+        </p>
+            <button class="btn">Read More...</button>
+    </div>
+    <div class="item">
+        <h1>Secure Patient Record Delivery with AWS CloudFormation and SNS</h1>
+        <p>
+            This project focuses on securing patient records online and facilitating private delivery to the intended parties through an AWS infrastructure. Leveraging AWS CloudFormation, a Virtual Private Cloud (VPC) is created to ensure secure communication channels. Integration with Amazon SNS enables the private publishing of messages, ensuring confidentiality and efficient delivery of medical reports to patients via mobile platforms with push notifications.
+        </p>
+            <button class="btn">Read More...</button>
+    </div>
+    <div class="item">
+        <h1>AWS Migration and Auto Scaling for Company ABC</h1>
+        <p>
+            This project entails migrating Company ABC's product infrastructure to AWS, comprising a MySQL database and a PHP-based website(https://lms.intellipaat.com
+            /mediaFiles/2020/10/code.zip). With a focus on achieving high availability, Auto Scaling is implemented to dynamically adjust server capacity in response to changing traffic demands. By leveraging Amazon EC2, the project aims to optimize resource utilization and enhance the scalability and resilience of the company's web application.
+        </p>
+            <button class="btn">Read More...</button>
+    </div>
+    <div class="item">
+        <h1>Rapid DevOps Implementation for Abode Software</h1>
+        <p>
+            This project aims to swiftly implement a DevOps lifecycle for Abode Software's product development. Key objectives include configuring necessary software using a configuration management tool, implementing a Git workflow, automating CodeBuild triggers for master and develop branches, containerizing the application with Docker, and orchestrating these tasks in a Jenkins Pipeline. By streamlining these processes, Abode Software can accelerate their software development lifecycle and enhance collaboration and efficiency across teams.
+        </p>
+            <button class="btn">Read More...</button>
+    </div>
+    <div class="item">
+        <h1>Automated Deployment and Scaling with Docker and Kubernetes</h1>
+        <p>
+            As a DevOps Engineer at Analytics Pvt Ltd, I'm tasked with implementing a streamlined DevOps lifecycle for containerized applications. This involves transitioning from a monolithic architecture to Docker and Kubernetes-based deployments. Key responsibilities include implementing Git workflow, automating CodeBuild with Docker, deploying Kubernetes clusters, and configuring Jenkins pipelines. Infrastructure management is efficiently handled with Terraform.
+        </p>
+            <button class="btn">Read More...</button>
+    </div>
+    <button id="next">>></button>
+    <button id="prev"><<</button>
+ </div>
+ <a href="/index.html">Go Back to Portfolio.</a>
+    <script>
+        let items = document.querySelectorAll(".slider .item");
+        let next = document.getElementById('next');
+        let prev = document.getElementById('prev');
+        let active = 0;
+        function loadShow(){
+            let stt = 0;
+                items[active].style.transform = `none`;
+                items[active].style.zIndex = 1;
+                items[active].style.filter = 'none';
+                items[active].style.opacity = 1;
+            for(var i = active+1;i<items.length;i++){
+                stt++;
+                items[i].style.transform = `translateX(${120*stt}px) scale(${1-0.2*stt}) perspective(16px) rotateY(-1deg)`;
+                items[i].style.zIndex = -stt;
+                items[i].style.filter = 'blur(5px)';
+                items[i].style.opacity = stt > 2? 0: 0.6;
+            }
+            stt =0;
+            for(var i = active -1;i>=0;i--){
+                stt++;
+                items[i].style.transform = `translateX(${-120*stt}px) scale(${1-0.2*stt}) perspective(16px) rotateY(1deg)`;
+                items[i].style.zIndex = -stt;
+                items[i].style.filter = 'blur(5px)';
+                items[i].style.opacity = stt > 2? 0: 0.6;
+            }
+            if (active === items.length - 1) {
+                next.style.display = 'none';
+            }else if(active === 0){
+                prev.style.display = 'none';
+            }else {
+                next.style.display = 'block';
+                prev.style.display = 'block';
+            } 
+ }
+        loadShow();
+        next.onclick = function() {
+            active = active+1<items.length ? active+1:active;
+            loadShow();
+        }
+        prev.onclick = function(){
+            active = active-1>=0? active-1:active;
+            loadShow();
+        } 
+    </script>
+</body>
+</html>
